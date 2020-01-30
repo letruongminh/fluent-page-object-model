@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -10,24 +11,31 @@ public class RegistrationPage
     private WebDriver driver;
 
     @FindBy( css = "[name=\"firstName\"]" )
+    @CacheLookup
     WebElement txtFirstName;
 
     @FindBy( css = "[name=\"lastName\"]" )
+    @CacheLookup
     WebElement txtLastName;
 
     @FindBy( css = "[name=\"email\"]")
+    @CacheLookup
     WebElement txtUserName;
 
     @FindBy( css = "[name=\"password\"]" )
+    @CacheLookup
     WebElement txtPassword;
 
     @FindBy( css = "[name=\"confirmPassword\"]" )
+    @CacheLookup
     WebElement txtConfirmPassword;
 
     @FindBy( css = "[name=\"register\"]" )
+    @CacheLookup
     WebElement btnRegister;
 
     @FindBy( css = "[href^=\"mercurysignon\"]" )
+    @CacheLookup
     WebElement txtSignIn;
 
     public RegistrationPage(WebDriver driver) {
